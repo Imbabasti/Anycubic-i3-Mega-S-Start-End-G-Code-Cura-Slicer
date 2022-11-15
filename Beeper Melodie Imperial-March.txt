@@ -1,3 +1,5 @@
+Wichtig die einzelnen M300-Zeilen müssen getrennt untereinander stehen im Slicer im Start oder Stop G-Code!
+
 ;Imperial-March
 M300 S392 P436
 M300 S0 P109
