@@ -2,6 +2,17 @@ Hier ein paar Melodien
 
 Wichtig die einzelnen M300-Zeilen müssen getrennt untereinander stehen im Slicer im Start oder Stop G-Code!
 
+;Indiana Jones theme
+M300 S1318 P240
+M300 S0 P120
+M300 S1396 P120
+M300 S1567 P120
+M300 S0 P120
+M300 S2093 P720
+M300 S0 P180
+
+--------------------
+
 ;Zelda Theme
 M300 S987 P600
 M300 S1479 P900
