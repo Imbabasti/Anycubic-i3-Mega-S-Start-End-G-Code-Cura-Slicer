@@ -8,4 +8,4 @@ https://github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S.git
 
 und nutzt Mesh-Bed-Leveling + Vorwärmfunktion + Purge-Line und Start Melodie.
 
-Mein Start G-Code hat auch eine Start Melodie (StarTrek Theme). Danke an Oliver Kuhlemann https://cool-web.de/
+Mein Start G-Code hat auch eine Start Melodie (StarTrek Theme als Beispiel). Danke an Oliver Kuhlemann https://cool-web.de/
