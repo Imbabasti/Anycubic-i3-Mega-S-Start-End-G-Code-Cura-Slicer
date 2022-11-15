@@ -1,6 +1,6 @@
 Hier ein paar Melodien
 
-Wichtig die einzelnen M300-Zeilen müssen getrennt untereinander stehen im Slicer Start oder Stop G-Code!
+Wichtig die einzelnen M300-Zeilen müssen getrennt untereinander stehen im Slicer im Start oder Stop G-Code!
 
 ;Zelda Theme
 M300 S987 P600
@@ -43,6 +43,7 @@ M300 S2793 P1200
 M300 S3322 P600
 M300 S2959 P1200
 
+--------------------
 
 ;MauroPicottoKomodo
 M300 S1567 P181
@@ -96,6 +97,7 @@ M300 S0 P90
 M300 S2093 P181
 M300 S2349 P181
 
+--------------------
 
 ;Star Wars
 M300 S1396 P166
@@ -138,6 +140,7 @@ M300 S2349 P166
 M300 S2489 P166
 M300 S2093 P666
 
+--------------------
 
 ;StarTrek
 M300 S1396 P714
@@ -149,6 +152,7 @@ M300 S1567 P357
 M300 S2093 P357
 M300 S2793 P952
 
+--------------------
 
 ;How much is the fish
 M300 S1567 P206
@@ -174,6 +178,7 @@ M300 S1046 P206
 M300 S1174 P827
 M300 S0 P206
 
+--------------------
 
 ;Bolero
 M300 S2093 P750
@@ -225,6 +230,7 @@ M300 S1396 P375
 M300 S1174 P750
 M300 S1567 P1500
 
+--------------------
 
 ;Coca-cola
 M300 S2959 P240
@@ -240,6 +246,7 @@ M300 S2959 P480
 M300 S2349 P480
 M300 S0 P960
 
+--------------------
 
 ;Deutschlandlied
 M300 S1567 P750
@@ -316,6 +323,7 @@ M300 S987 P187
 M300 S880 P187
 M300 S1567 P750
 
+--------------------
 
 ;FunkyTown
 M300 S2093 P240
@@ -344,6 +352,7 @@ M300 S2793 P240
 M300 S2637 P240
 M300 S2093 P240
 
+--------------------
 
 ;SuperMario
 M300 S0 P600
@@ -390,6 +399,7 @@ M300 S2093 P150
 M300 S2349 P150
 M300 S987 P300
 
+--------------------
 
 ;Super Mario Bros Death Theme
 M300 S2093 P83
