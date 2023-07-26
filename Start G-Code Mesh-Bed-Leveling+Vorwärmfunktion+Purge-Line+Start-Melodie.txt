@@ -1,13 +1,48 @@
 ;print start melodie
-;StarTrek
-M300 S1396 P714
-M300 S932 P238
-M300 S2489 P1428
-M300 S2349 P476
-M300 S932 P357
-M300 S1567 P357
-M300 S2093 P357
-M300 S2793 P952
+;SuperMario
+M300 S0 P600
+M300 S1046 P450
+M300 S1567 P150
+M300 S0 P300
+M300 S1318 P300
+M300 S0 P150
+M300 S880 P300
+M300 S987 P150
+M300 S0 P150
+M300 S932 P150
+M300 S880 P300
+M300 S1567 P450
+M300 S2637 P300
+M300 S3135 P300
+M300 S1760 P300
+M300 S2637 P150
+M300 S3135 P150
+M300 S0 P150
+M300 S2637 P300
+M300 S2093 P150
+M300 S2349 P150
+M300 S987 P450
+M300 S2093 P450
+M300 S1567 P150
+M300 S0 P300
+M300 S1318 P300
+M300 S0 P150
+M300 S880 P300
+M300 S987 P150
+M300 S0 P150
+M300 S932 P150
+M300 S880 P300
+M300 S1567 P300
+M300 S2637 P300
+M300 S3135 P300
+M300 S1760 P300
+M300 S2793 P150
+M300 S3135 P150
+M300 S0 P150
+M300 S2637 P300
+M300 S2093 P150
+M300 S2349 P150
+M300 S987 P300
 G21                                        ; metric values
 G90                                        ; absolute positioning
 M82                                        ; set extruder to absolute mode
@@ -20,7 +55,7 @@ M420 S1                                    ; enable mesh leveling
 G0 Z0.15                                   ; lift nozzle a bit
 G0 X2                                      ; move away from clips
 G92 E0                                     ; zero the extruded length
-G1 Y50 E25 F500                            ; Extrude 25mm of filament in a 5cm line.
+G1 Y100 E50 F500                            ; Extrude 50mm of filament in a 10cm line.
 G92 E0                                     ; zero the extruded length again
 G1 E-2 F500                                ; Retract a little
 G1 Y120 F2000                              ; Quickly wipe away from the filament line
