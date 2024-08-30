@@ -51,11 +51,11 @@ M190 S{material_bed_temperature_layer_0}   ; preheat and wait for bed
 M109 S{material_print_temperature_layer_0} ; preheat and wait for hotend
 M300 S1000 P500                            ; BEEP heating done
 G28 X0 Y10 Z0                              ; move X/Y to min endstops
-M420 S1                                    ; enable mesh leveling
-G0 Z0.15                                   ; lift nozzle a bit
+M420 S1 Z10                                ; enable stored mesh leveling up to a height of 10mm
+G0 Z0.3                                    ; lift nozzle a bit
 G0 X2                                      ; move away from clips
 G92 E0                                     ; zero the extruded length
-G1 Y100 E50 F500                            ; Extrude 50mm of filament in a 10cm line.
+G1 X100 E50 F500                           ; Extrude 50mm of filament in a 10cm line in Front of the Bed
 G92 E0                                     ; zero the extruded length again
 G1 E-2 F500                                ; Retract a little
 G1 Y120 F2000                              ; Quickly wipe away from the filament line
