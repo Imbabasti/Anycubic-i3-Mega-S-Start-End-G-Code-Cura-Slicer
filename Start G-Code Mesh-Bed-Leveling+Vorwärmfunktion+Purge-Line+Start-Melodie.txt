@@ -1,5 +1,11 @@
-;print start melodie
-;SuperMario
+;==========================================================
+; Anycubic i3 Mega S
+; Knutwurst Firmware + BLTouch
+; Cura Start G-Code
+; Optimierte Purge-Line vorne
+;==========================================================
+
+;--------------- SuperMario Theme -------------------------
 M300 S0 P600
 M300 S1046 P450
 M300 S1567 P150
@@ -43,19 +49,68 @@ M300 S2637 P300
 M300 S2093 P150
 M300 S2349 P150
 M300 S987 P300
-G21                                        ; metric values
-G90                                        ; absolute positioning
-M82                                        ; set extruder to absolute mode
-M107                                       ; start with the fan off
-M190 S{material_bed_temperature_layer_0}   ; preheat and wait for bed
-M109 S{material_print_temperature_layer_0} ; preheat and wait for hotend
-M300 S1000 P500                            ; BEEP heating done
-G28 X0 Y10 Z0                              ; move X/Y to min endstops
-M420 S1 Z10                                ; enable stored mesh leveling up to a height of 10mm
-G0 Z0.3                                    ; lift nozzle a bit
-G0 X2                                      ; move away from clips
-G92 E0                                     ; zero the extruded length
-G1 X100 E50 F500                           ; Extrude 50mm of filament in a 10cm line in Front of the Bed
-G92 E0                                     ; zero the extruded length again
-G1 E-2 F500                                ; Retract a little
-G1 Y120 F2000                              ; Quickly wipe away from the filament line
+
+;--------------- Grundeinstellungen -----------------------
+G21                         ; Maßeinheit Millimeter
+G90                         ; Absolute Positionierung
+M82                         ; Extruder absolute Werte
+M107                        ; Bauteillüfter aus
+
+
+;--------------- Aufheizen --------------------------------
+M190 S{material_bed_temperature_layer_0}
+; Heizbett auf Drucktemperatur bringen und warten
+
+M109 S{material_print_temperature_layer_0}
+; Düse auf Drucktemperatur bringen und warten
+
+
+;--------------- Signal -----------------------------------
+M300 S1000 P500
+; kurzer Signalton: Temperatur erreicht
+
+
+;--------------- Referenzfahrt ----------------------------
+G28
+; Alle Achsen homen (X/Y/Z)
+
+
+;--------------- BLTouch Mesh aktivieren ------------------
+M420 S1
+; gespeichertes Bed-Leveling-Mesh einschalten
+
+G4 P500
+; kurze Pause zum sicheren Aktivieren
+
+
+;--------------- Position für Purge-Line ------------------
+G0 Z0.28 F3000
+; Düse auf erste Schichthöhe fahren
+
+G0 X10 Y10 F6000
+; Startposition vorne links
+
+
+;--------------- Filament Priming -------------------------
+G92 E0
+; Extruderzähler auf Null setzen
+
+G1 X120 E40 F500
+; Purge-Line:
+; 110 mm Strecke nach rechts
+; 40 mm Filament fördern
+; langsame Geschwindigkeit für sicheren Materialfluss
+
+G92 E0
+; Extruderzähler erneut zurücksetzen
+
+
+;--------------- Druckbeginn vorbereiten ------------------
+G1 Z2 F3000
+; Düse anheben
+
+G1 X10 Y20 F6000
+; zurück zur Startposition ohne die Purge-Line zu berühren
+
+
+;--------------- Jetzt startet der Druck ------------------
