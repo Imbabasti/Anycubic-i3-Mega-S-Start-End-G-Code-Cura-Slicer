@@ -1,62 +1,48 @@
-M104 S0                                    ; Extruder off
-M140 S0                                    ; Heatbed off
-M107                                       ; Fan off
-G91                                        ; relative positioning
-G1 E-5 F300                                ; retract a little
-G1 Z+10                                    ; lift print head
-G28 X0 Y0                                  ; homing
-G1 Y180 F2000                              ; reset feedrate
-M84                                        ; disable stepper motors
-G90                                        ; absolute positioning
-;end print melodie
-;MauroPicottoKomodo
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S1396 P181
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S1174 P181
-M300 S2349 P181
-M300 S0 P363
-M300 S1174 P181
-M300 S2349 P181
-M300 S0 P363
-M300 S1174 P181
-M300 S2349 P181
-M300 S1174 P181
-M300 S2349 P181
-M300 S0 P363
-M300 S1174 P181
-M300 S2349 P181
-M300 S1396 P181
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S1396 P181
-M300 S1567 P181
-M300 S0 P363
-M300 S1396 P181
-M300 S1567 P181
-M300 S880 P181
-M300 S1760 P181
-M300 S0 P90
-M300 S1760 P181
-M300 S0 P90
-M300 S880 P181
-M300 S1760 P181
-M300 S0 P90
-M300 S1760 P181
-M300 S0 P90
-M300 S2093 P181
-M300 S2349 P181
+;==========================================================
+; Anycubic i3 Mega S
+; Knutwurst Firmware + BLTouch
+; Cura End G-Code
+;==========================================================
+
+;--------------- Heizung und Lüfter aus ------------------
+M104 S0              ; Hotend aus
+M140 S0              ; Heizbett aus
+M107                 ; Bauteillüfter aus
+
+
+;--------------- Düse entlasten --------------------------
+G91                  ; Relative Positionierung
+G1 E-3 F300          ; Kleiner Retract
+
+
+;--------------- Druckkopf anheben ------------------------
+G1 Z10 F3000         ; Düse 10mm nach oben
+
+
+;--------------- Parkposition -----------------------------
+G90                  ; Absolute Positionierung
+G1 X0 Y200 F4000     ; Kopf nach hinten fahren
+
+
+;--------------- Motoren aus ------------------------------
+M84                  ; Stepper deaktivieren
+
+
+;--------------- Endmelodie -------------------------------
+; Super Mario Bros Death Theme
+M300 S2093 P83
+M300 S2093 P83
+M300 S2093 P83
+M300 S0 P333
+M300 S987 P166
+M300 S2793 P166
+M300 S0 P166
+M300 S2793 P166
+M300 S2793 P250
+M300 S2637 P250
+M300 S2349 P166
+M300 S2093 P166
+M300 S0 P166
+M300 S1318 P166
+M300 S0 P166
+M300 S1046 P166
